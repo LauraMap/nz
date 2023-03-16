@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuseelandreise</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 
 <body>
     <h1>Neuseelandreise</h1>
     <h2><em>Picton</em></h2>
-    <p>Picton (Māori: <strong>Waitohi</strong>) is a town in the Marlborough Region of New Zealand's South Island. The town is located
+    <p>Picton (Māori: <strong>Waitohi</strong>) is a town in the Marlborough Region of New Zealand's South Island. The
+        town is located
         near the head of the Queen Charlotte Sound / Tōtaranui, 25 km (16 mi) north of Blenheim and 65 km (40 mi) west
         of Wellington. Waikawa lies just north-east of Picton and is considered to be a contiguous part of the Picton
         urban area.<br>
@@ -22,8 +25,10 @@
         (June 2022), making it the second-largest town in the Marlborough Region behind Blenheim. It is the easternmost
         town in the South Island with a population of at least 1,000 people.
         (Quelle: <a href="https://en.wikipedia.org/wiki/Picton,_New_Zealand">Wikipedia</a>)
-        <figure><img src="images/attraction.jpg" alt="Hafen in Picton mit geparkter Fähre">
-        <figcaption>Der Hafen von Picton (Quelle: <a href="https://pixabay.com/photos/ferry-port-dock-ship-sea-travel-2039040/">Kiwi_Lisa@pixabay</a>)</figcaption>
+    <figure><img src="images/attraction.jpg" alt="Hafen in Picton mit geparkter Fähre">
+        <figcaption>Der Hafen von Picton (Quelle: <a
+                href="https://pixabay.com/photos/ferry-port-dock-ship-sea-travel-2039040/">Kiwi_Lisa@pixabay</a>)
+        </figcaption>
     </figure>
     </p>
 
@@ -33,13 +38,28 @@
     <ul>
         <li><a href="https://www.newzealand.com/de/picton/">Sehenswürdigkeiten und Aktivitäten</a></li>
         <li><a href="https://www.newzealand.com/de/accommodation/">Unterkünfte</a></li>
-        <li><a href="https://www.directferries.at/picton_faehre.htm?gclid=3b60f29087a0178688b19683aa1e2e86&gclsrc=3p.ds&&utm_source=bing&utm_medium=cpc&utm_campaign=DF_AT_DE;PORTS;Tier%2001;EXACT;NC-G14872701005&utm_term=picton%20f%C3%A4hre&utm_content=PORTS;DESKTOP;Picton;Tier_01;AB_FERRY_FERRIES">Anreise</a></li>
+        <li><a
+                href="https://www.directferries.at/picton_faehre.htm?gclid=3b60f29087a0178688b19683aa1e2e86&gclsrc=3p.ds&&utm_source=bing&utm_medium=cpc&utm_campaign=DF_AT_DE;PORTS;Tier%2001;EXACT;NC-G14872701005&utm_term=picton%20f%C3%A4hre&utm_content=PORTS;DESKTOP;Picton;Tier_01;AB_FERRY_FERRIES">Anreise</a>
+        </li>
     </ul>
 
     <nav>
         <a href="https://fabianwild.github.io/nz">🡸 vorhergehende Etappe</a> |
         <a href="https://damerow.github.io/nz">nächste Etappe 🡺</a>
     </nav>
+
+    <script>
+        var map = L.map('map').setView([-41.293056, 174.001944], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-41.293056, 174.001944]).addTo(map)
+            .bindPopup('Picton')
+            .openPopup();
+
+    </script>
 </body>
 
 </html>
