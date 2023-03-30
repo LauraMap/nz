@@ -72,7 +72,7 @@ const STOPS = [
         user: "damerow",
         lat: -41.2875,
         lng: 174.7761,
-        Wikipedia: "https://de.wikipedia.org/wiki/Wellington",
+        Wikipedia: "https://de.wikipedia.org/wiki/Wellington"
     },
     {
         title: "Tongariro-Nationalpark",
