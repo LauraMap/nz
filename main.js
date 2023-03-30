@@ -101,16 +101,20 @@ console.log(STOPS);
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
 
 L.control.scale({
     imperial: false, 
     position: "bottomright"
 }).addTo(map);
 
-L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+
+
+L.control.layers({
+    "Openstreetmap" : osm,
+    "Watercolor" : watercolor
+}).addTo(map);
 
 for (let stop of STOPS) {
     //Marker für den Stopp
