@@ -108,3 +108,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([stop_lat, stop_lng]).addTo(map)
     .bindPopup(title)
     .openPopup();
+
+for (let stop of STOPS) {
+    console.log(stop);
+    console.log(stop.title); //auf Element im Objekt zugreifen
+    console.log(stop.user)
+    console.log(stop.lat)
+    console.log(stop.lng)
+    console.log(stop.wikipedia)
+}
