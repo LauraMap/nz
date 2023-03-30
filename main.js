@@ -108,7 +108,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 for (let stop of STOPS) {
     //Marker für den Stopp
-    L.marker([stop.lat, stop.lng]).addTo(map)
-    .bindPopup(stop.title)
-    .openPopup();
+    let marker = L.marker([stop.lat, stop.lng]); 
+    marker.addTo(map);
+    marker.bindPopup(`<h3>${stop.title}</h3>
+    <a href="${stop.wikipedia}">Wikipedia</a>
+    `);
+    if (stop.user == "LauraMap") {
+        marker.openPopup();
+    }
 }
