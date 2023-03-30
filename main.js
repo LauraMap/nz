@@ -3,12 +3,15 @@ let stop_lng = 174.001944;
 let zoom = 13;
 let title = 'Picton';
 
-const STOPS = ['Abel-Tasman-Nationalpark', 'Picton', 'Wellington'];
+const STOPS = ['Abel-Tasman-Nationalpark', {
+    title: "Picton", 
+    user: "LauraMap",
+    lat: -41.293056,
+    lng: 174.001944,
+    wikipedia: "https://en.wikipedia.org/wiki/Picton,_New_Zealand"
+}, 'Wellington'];
 console.log(STOPS);
-console.log(STOPS[0]);
-console.log(STOPS[1]);
-console.log(STOPS[2]);
-console.log(STOPS.length);
+
 
 
 
