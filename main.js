@@ -103,7 +103,7 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
 
 L.control.scale({
-    imperial: false, 
+    imperial: false,
     position: "bottomleft"
 }).addTo(map);
 
@@ -114,17 +114,17 @@ let cycle = L.tileLayer.provider('CyclOSM').addTo(map);
 
 
 L.control.layers({
-    "Openstreetmap" : osm,
-    "Watercolor" : watercolor,
-    "Topography" : topo,
-    "Fahrradwege" : cycle
+    "Openstreetmap": osm,
+    "Watercolor": watercolor,
+    "Topography": topo,
+    "Fahrradwege": cycle
 }).addTo(map);
 
 for (let stop of STOPS) {
     //Marker für den Stopp
     let marker = L.marker([stop.lat, stop.lng], {
         opacity: 1,
-    }) 
+    })
     marker.addTo(map)
     marker.bindPopup(`<h3>${stop.title}</h3>
     <a href="${stop.wikipedia}">Wikipedia</a>
