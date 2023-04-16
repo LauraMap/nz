@@ -110,12 +110,14 @@ L.control.scale({
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
 let topo = L.tileLayer.provider('OpenTopoMap').addTo(map);
+let cycle = L.tileLayer.provider('CyclOSM').addTo(map);
 
 
 L.control.layers({
     "Openstreetmap" : osm,
     "Watercolor" : watercolor,
-    "Topography" : topo
+    "Topography" : topo,
+    "Fahrradwege" : cycle
 }).addTo(map);
 
 for (let stop of STOPS) {
