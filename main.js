@@ -103,8 +103,7 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
 
 L.control.scale({
-    imperial: false,
-    position: "bottomleft"
+    imperial: false
 }).addTo(map);
 
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
