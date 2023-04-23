@@ -119,11 +119,9 @@ L.control.layers({
 
 for (let stop of STOPS) {
     //Marker für den Stopp
-    let marker = L.marker([stop.lat, stop.lng], {
-        opacity: 1,
-    })
-    marker.addTo(map)
-    marker.bindPopup(`<h3>${stop.title}</h3>
+    let marker = L.marker([stop.lat, stop.lng])
+        .addTo(map)
+        .bindPopup(`<h3>${stop.title}</h3>
     <a href="${stop.wikipedia}">Wikipedia</a>
     `);
     if (stop.user == "LauraMap") {
