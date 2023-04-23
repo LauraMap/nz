@@ -97,18 +97,17 @@ const STOPS = [
     }];
 
 let map = L.map('map', {
-    fullscrenControl: true
+    fullscreenControl: true
 }).setView([stop_lat, stop_lng], zoom);
-
 
 L.control.scale({
     imperial: false
 }).addTo(map);
 
-let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+let watercolor = L.tileLayer.provider('Stamen.Watercolor');
 let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
-let topo = L.tileLayer.provider('OpenTopoMap').addTo(map);
-let cycle = L.tileLayer.provider('CyclOSM').addTo(map);
+let topo = L.tileLayer.provider('OpenTopoMap');
+let cycle = L.tileLayer.provider('CyclOSM');
 
 
 L.control.layers({
